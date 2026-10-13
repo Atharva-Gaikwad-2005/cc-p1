@@ -21,13 +21,12 @@ services:
   # ============================================================================
   # 2. Frontend Static Site (React + Vite)
   # ============================================================================
-  - type: static
+  - type: web
     name: documind-ai-frontend
+    runtime: static
     rootDir: frontend
     buildCommand: npm install && npm run build
     staticPublishPath: dist
-    plan: free
-    region: oregon
     routes:
       - type: rewrite
         source: /*
